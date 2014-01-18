@@ -4,6 +4,25 @@
 	
 	Most of the styling in here comes directly from either the webos-ports template or the enyo JS flickr sample
 */
+
+/*
+
+	Copyright 2014 Jan Thiemen Postema
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+*/
+
 #app {
 	background-color: #000000;
 }
@@ -78,17 +97,17 @@
 /*
 *	Everything down here is taken from the enyojs flickr sample application
 */
-.panels-sample-flickr-panels {
+.panels-sample-panels {
 	color: white;
 	background: #b4b4b4;
 }
-.panels-sample-flickr-panels > * {
+.panels-sample-panels > * {
 	width: 320px;
 	box-shadow: -4px 0px 4px rgba(0,0,0,0.3);
 	-moz-box-shadow: -4px 0px 4px rgba(0,0,0,0.3);
 	-webkit-box-shadow: -4px 0px 4px rgba(0,0,0,0.3);
 }
-.panels-sample-flickr-item {
+.panels-sample-item {
 	position: relative;
 	border-bottom: 1px solid #0E0E0E;
 	padding: 12px 16px;
@@ -96,11 +115,11 @@
 	background-color: #333333;
 }
 
-.panels-sample-flickr-item.onyx-selected {
+.panels-sample-item.onyx-selected {
 	background-color: MidnightBlue;
 }
 
-.panels-sample-flickr-title {
+.panels-sample-title {
 	position: absolute;
 	top: 10px;
 	right: 0;
@@ -111,12 +130,12 @@
 	text-overflow: ellipsis;
 	color: white;
 }
-.panels-sample-flickr-thumbnail {
+.panels-sample-thumbnail {
 	width: 25px;
 	height: 25px;
 }
 
-.panels-sample-flickr-image {
+.panels-sample-image {
 	box-sizing: border-box;
 	max-height: 90%;
 	max-width: 90%;
@@ -126,17 +145,17 @@
 	height: auto;
 }
 
-.panels-sample-flickr-image.wide {
+.panels-sample-image.wide {
 	width: 100%;
 }
 
 
 @media all and (max-width: 800px) {
-	.panels-sample-flickr-image.wide {
+	.panels-sample-image.wide {
 		width: auto;
 	}
 }
 
-.panels-sample-flickr-image.tall {
+.panels-sample-image.tall {
 	height: 100%;
 }
