@@ -1,0 +1,46 @@
+{
+    "id": "org.webosports.app.filemanager.service",
+    "description": "filemanager service",
+    "activityTimeout": 3600,
+    "services": [ {
+        "name": "org.webosports.app.filemanager.service",
+        "description": "filemanager service",
+        "commands": [
+			{
+                "name": "removeDir",
+                "assistant": "removeDirAssistant",
+                "public": true
+            },
+			{
+                "name": "mkDir",
+                "assistant": "mkDirAssistant",
+                "public": true
+            },
+			{
+                "name": "removeFile",
+                "assistant": "removeFileAssistant",
+                "public": true
+            },
+			{
+                "name": "moveFile",
+                "assistant": "moveFileAssistant",
+                "public": true
+            },
+			{
+                "name": "getFileSize",
+                "assistant": "getFileSizeAssistant",
+                "public": true
+            },
+			{
+                "name": "GetDirectories",
+                "assistant": "GetDirectoriesAssistant",
+                "public": true
+            },
+            {
+                "name": "GetLicenseForPackage",
+                "assistant": "GetLicenseForPackageAssistant",
+                "public": true
+            }
+        ]
+    } ]
+}

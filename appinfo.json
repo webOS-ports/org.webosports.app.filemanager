@@ -1,0 +1,11 @@
+{
+	"title": "File Manager",
+	"id": "org.webosports.app.filemanager",
+	"version": "1.0.0",
+	"vendor": "WebOS Ports",
+	"vendor_url": "https://github.com/webOS-ports/org.webosports.app.filemanager",
+	"type": "web",
+	"main": "index.html",
+	"icon": "icon.png",
+	"uiRevision": "2"
+}

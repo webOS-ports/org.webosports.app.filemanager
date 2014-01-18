@@ -1,0 +1,142 @@
+/*
+	Put anything you reference with "url()" in ../assets/
+	This way, you can minify your application, and just remove the "source" folder for production.
+	
+	Most of the styling in here comes directly from either the webos-ports template or the enyo JS flickr sample
+*/
+#app {
+	background-color: #000000;
+}
+
+#app > * {
+	background-color: #b4b4b4;
+}
+
+.onyx-toolbar {
+	height: 54px;
+}
+
+.enyo-fill {
+	background-color: #555;
+}
+
+.scroller {
+	background-color: #b4b4b4;
+}
+
+.list-header {
+	width: inherit;
+	height: 14px;
+	line-height: 14px;
+	padding: 10px;
+	color: white;
+	background-color: #555;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 1px solid #0E0E0E;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.list-item {
+	width: inherit;
+	height: 44px;
+	padding: 4px;
+	color: white;
+	background-color: #333333;
+	border-bottom: 1px solid #0E0E0E;
+	line-height: 44px;
+	font-size: 18px;
+}
+
+.list-item.onyx-selected {
+	background-color: MidnightBlue;
+}
+
+.onyx-groupbox {
+	margin-bottom: 10px;
+}
+
+.group-item {
+	padding: 10px;
+	min-height: 32px;
+	line-height: 32px;
+	color: white;
+}
+
+.password-popup {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-top: 40%;
+	margin-left: 30%;
+	margin-right: 30%;
+	text-align: center;
+}
+
+/*
+*	Everything down here is taken from the enyojs flickr sample application
+*/
+.panels-sample-flickr-panels {
+	color: white;
+	background: #b4b4b4;
+}
+.panels-sample-flickr-panels > * {
+	width: 320px;
+	box-shadow: -4px 0px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow: -4px 0px 4px rgba(0,0,0,0.3);
+	-webkit-box-shadow: -4px 0px 4px rgba(0,0,0,0.3);
+}
+.panels-sample-flickr-item {
+	position: relative;
+	border-bottom: 1px solid #0E0E0E;
+	padding: 12px 16px;
+	color: white;
+	background-color: #333333;
+}
+
+.panels-sample-flickr-item.onyx-selected {
+	background-color: MidnightBlue;
+}
+
+.panels-sample-flickr-title {
+	position: absolute;
+	top: 10px;
+	right: 0;
+	left: 40px;
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: white;
+}
+.panels-sample-flickr-thumbnail {
+	width: 25px;
+	height: 25px;
+}
+
+.panels-sample-flickr-image {
+	box-sizing: border-box;
+	max-height: 90%;
+	max-width: 90%;
+	border: solid 5px #CCC;
+	box-shadow: 1px 1px 5px #999;
+	width: auto;
+	height: auto;
+}
+
+.panels-sample-flickr-image.wide {
+	width: 100%;
+}
+
+
+@media all and (max-width: 800px) {
+	.panels-sample-flickr-image.wide {
+		width: auto;
+	}
+}
+
+.panels-sample-flickr-image.tall {
+	height: 100%;
+}
