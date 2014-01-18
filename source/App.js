@@ -1,20 +1,38 @@
+/*
+
+	Copyright 2014 Jan Thiemen Postema
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+*/
+
 enyo.kind({
 	name: "App",
 	kind: "Panels",
-	classes: "panels-sample-flickr-panels enyo-unselectable enyo-fit",
+	classes: "panels-sample-panels enyo-unselectable enyo-fit",
 	arrangerKind: "CollapsingArranger",
 	components: [
 		{kind: "enyo.Signals", onbackbutton: "handleBackGesture"},
 		{layoutKind: "FittableRowsLayout", components: [
-			{kind: "PortsHeader", title: "HOI!6", classes: "enyo-fill", taglines: [
+			{kind: "PortsHeader", title: "File Manager", classes: "enyo-fill", taglines: [
 				"Really, I hate taglines'",
 				"Look at all those files!",
 				"why don\'t you mkdir?",
 			]},
 			{kind: "List", name: "mainList", fit: true, touch: true, onSetupItem: "buildList", components: [
-                {name: "item", style: "padding: 10px;", dir: false, classes: "panels-sample-flickr-item enyo-border-box", onhold: "itemHold", ontap: "itemTap", components: [
-					{name: "thumbnail", kind: "Image", classes: "panels-sample-flickr-thumbnail"},
-					{name: "title", classes: "panels-sample-flickr-title"}
+                {name: "item", style: "padding: 10px;", dir: false, classes: "panels-sample-item enyo-border-box", onhold: "itemHold", ontap: "itemTap", components: [
+					{name: "thumbnail", kind: "Image", classes: "panels-sample-thumbnail"},
+					{name: "title", classes: "panels-sample-title"}
 				]}
 			]}
 		]},
@@ -25,7 +43,7 @@ enyo.kind({
 			{tag: "br"},
 			{kind: "Scroller", horizontal: "hidden", classes: "scroller", fit: true, touch: true, components:[
 				{fit: true, style: "position: relative;", name: "imageContainer",  showing: false, components: [
-					{name: "imageItem", kind: "Image", classes: "enyo-fit panels-sample-flickr-center panels-sample-flickr-image"},
+					{name: "imageItem", kind: "Image", classes: "enyo-fit panels-sample-center panels-sample-image"},
 				]},
 				{kind: "onyx.Groupbox", components: [
 					{kind: "onyx.GroupboxHeader", content: "File information"},
@@ -49,9 +67,9 @@ enyo.kind({
 					{kind:"onyx.Button", name: "moveItemListCloseButton", ontap: "moveItemCloseButton", fit: true, content: "Back"},
 					{kind:"onyx.Button", name: "moveItemListButton", ontap: "moveItemSelectButton", fit: true, content: "Select folder"},
 					{kind: "List", name: "moveList", style: "height: 90%; width: 95%;", touch: true, onSetupItem: "buildMoveList", components: [
-						{name: "itemMove", style: "padding: 10px;", dir: false, classes: "panels-sample-flickr-item enyo-border-box", ontap: "moveItemTap", components: [
-							{name: "thumbnailMove", kind: "Image", classes: "panels-sample-flickr-thumbnail"},
-							{name: "titleMove", classes: "panels-sample-flickr-title"}
+						{name: "itemMove", style: "padding: 10px;", dir: false, classes: "panels-sample-item enyo-border-box", ontap: "moveItemTap", components: [
+							{name: "thumbnailMove", kind: "Image", classes: "panels-sample-thumbnail"},
+							{name: "titleMove", classes: "panels-sample-title"}
 						]}
 					]}
 				]},
