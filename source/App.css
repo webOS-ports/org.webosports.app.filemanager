@@ -134,28 +134,3 @@
 	width: 25px;
 	height: 25px;
 }
-
-.panels-sample-image {
-	box-sizing: border-box;
-	max-height: 90%;
-	max-width: 90%;
-	border: solid 5px #CCC;
-	box-shadow: 1px 1px 5px #999;
-	width: auto;
-	height: auto;
-}
-
-.panels-sample-image.wide {
-	width: 100%;
-}
-
-
-@media all and (max-width: 800px) {
-	.panels-sample-image.wide {
-		width: auto;
-	}
-}
-
-.panels-sample-image.tall {
-	height: 100%;
-}

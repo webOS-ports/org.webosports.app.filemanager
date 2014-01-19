@@ -42,9 +42,6 @@ enyo.kind({
 			]},
 			{tag: "br"},
 			{kind: "Scroller", horizontal: "hidden", classes: "scroller", fit: true, touch: true, components:[
-				{fit: true, style: "position: relative;", name: "imageContainer",  showing: false, components: [
-					{name: "imageItem", kind: "Image", classes: "enyo-fit panels-sample-center panels-sample-image"},
-				]},
 				{kind: "onyx.Groupbox", components: [
 					{kind: "onyx.GroupboxHeader", content: "File information"},
 					{name: "type", content: "Type: ", style: "padding: 8px; color: black;"},
@@ -73,6 +70,13 @@ enyo.kind({
 						]}
 					]}
 				]},
+				{tag: "br"},
+				{tag: "br"},
+				{kind: "onyx.Groupbox", showing: false, name: "imageContainer", components: [
+					{kind: "onyx.GroupboxHeader", content: "Image"},
+						{name: "imageItem", kind: "Image", style: "max-width: 100%; max-height: 100%;"},
+				]},
+
 				//end of move item list part
 				{name: "errorPopupBase", kind: "onyx.Popup", floating: true, centered: true, style: "padding: 10px", components: [
 					{name: "errorPopup", content: "Popup..."}
@@ -262,10 +266,12 @@ enyo.kind({
 			var fileExtension = fileExtensionArr[fileExtensionArr.length -1].toLowerCase();
 			this.$.fileExtension.show();
 			this.$.fileExtension.setContent("File extension: "+fileExtension);
-			if (fileExtension == "png" || fileExtension == "jpg" || fileExtension == "bmp") {
+			if (fileExtension.toLowerCase() == "png" || fileExtension.toLowerCase() == "jpg" || fileExtension.toLowerCase() == "bmp" || fileExtension.toLowerCase() == "gif" || fileExtension.toLowerCase() == "jpeg") {
 				this.$.imageContainer.show();
-				this.$.imageItem.setSrc(this.selectedItem.full_path);
+				this.$.openFileButton.hide();
+				this.$.imageItem.setSrc("file://"+this.selectedItem.full_path);
 			} else {
+				this.$.openFileButton.show();
 				this.$.imageContainer.hide();
 			}
 			this.$.type.setContent("Type: file");
