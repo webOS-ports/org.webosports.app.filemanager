@@ -24,7 +24,7 @@ enyo.kind({
 	components: [
 		{kind: "enyo.Signals", onbackbutton: "handleBackGesture"},
 		{layoutKind: "FittableRowsLayout", components: [
-			{kind: "PortsHeader", title: "1File Manager", classes: "enyo-fill", taglines: [
+			{kind: "PortsHeader", title: "File Manager", classes: "enyo-fill", taglines: [
 				"Really, I hate taglines'",
 				"Look at all those files!",
 				"why don\'t you mkdir?",
