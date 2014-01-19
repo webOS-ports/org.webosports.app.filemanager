@@ -266,7 +266,7 @@ enyo.kind({
 			var fileExtension = fileExtensionArr[fileExtensionArr.length -1].toLowerCase();
 			this.$.fileExtension.show();
 			this.$.fileExtension.setContent("File extension: "+fileExtension);
-			if (fileExtension == "png" || fileExtension == "jpg" || fileExtension == "bmp") {
+			if (fileExtension.toLowerCase() == "png" || fileExtension.toLowerCase() == "jpg" || fileExtension.toLowerCase() == "bmp" || fileExtension.toLowerCase() == "gif" || fileExtension.toLowerCase() == "jpeg") {
 				this.$.imageContainer.show();
 				this.$.openFileButton.hide();
 				this.$.imageItem.setSrc("file://"+this.selectedItem.full_path);
