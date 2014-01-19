@@ -35,11 +35,6 @@
                 "name": "GetDirectories",
                 "assistant": "GetDirectoriesAssistant",
                 "public": true
-            },
-            {
-                "name": "GetLicenseForPackage",
-                "assistant": "GetLicenseForPackageAssistant",
-                "public": true
             }
         ]
     } ]
