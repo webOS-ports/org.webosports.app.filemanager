@@ -1,0 +1,14 @@
+{
+	"role": {
+		"allowedNames": ["org.webosports.app.filemanager.service"],
+		"type": "regular",
+		"exeName": "js"
+	},
+	"permissions": [
+		{
+			"inbound": ["*"],
+			"outbound": ["*"],
+			"service": "org.webosports.app.filemanager.service"
+		}
+	]
+}
