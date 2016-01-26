@@ -62,11 +62,11 @@ getFileSizeAssistant.prototype.run = function(future) {
 	var stats = fs.statSync(path)
 	var fileSizeInBytes = stats["size"]
 	//Convert the file size to megabytes (optional)
-	 var fileSizeInMegabytes = fileSizeInBytes / 1000000.0
+	// var fileSizeInMegabytes = fileSizeInBytes / 1000000.0
 	future.result = {
        	"returnValue": true,
 		"succes": true,
-		"size":fileSizeInMegabytes,
+		"size":fileSizeInBytes,
     };
 }
 
