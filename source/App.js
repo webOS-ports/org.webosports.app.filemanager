@@ -327,10 +327,10 @@ enyo.kind({
 	getFileSizeComplete: function(inSender, inEvent) {
             var size = inEvent.data.size;
             var result;
-            var sizes = ['bytes', 'KB', 'MB', 'GB', 'TB'];
+            var sizes = ['bytes', 'KiB', 'MiB', 'GiB', 'TiB'];
 	    if (size == 0) {
                 result = "0 bytes";
-            } if (size == 1) {
+            } else if (size == 1) {
                 result = "1 byte";
             } else {
 	        var i = parseInt(Math.floor(Math.log(size) / Math.log(1024)));
