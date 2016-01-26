@@ -324,16 +324,23 @@ enyo.kind({
 		this.$.errorPopup.setContent('Folder deleted. Press "../" to go back.');
 		this.$.errorPopupBase.show();
 	},
-	bytesToSize: function (bytes) {
-	    var sizes = ['bytes', 'KB', 'MB', 'GB', 'TB'];
-	    if (bytes == 0) return 'bytes';
-	    var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-	    if (i == 0) return bytes + ' ' + sizes[i]; 
-	    return (bytes / Math.pow(1024, i)).toFixed(2) + ' ' + sizes[i];
-	},
 	getFileSizeComplete: function(inSender, inEvent) {
-		var size = inEvent.data.size;
-		this.$.size.setContent("Size: "+bytesToSize(size));
+	    var size = inEvent.data.size;
+		var result;
+		var sizes = ['bytes', 'KB', 'MB', 'GB', 'TB'];
+	    if (size == 0) {
+            result = "0 bytes";
+        } if (size == 1) {
+            result = "1 byte";
+        } else {
+	        var i = parseInt(Math.floor(Math.log(size) / Math.log(1024)));
+	        if (i == 0) {
+                result = size + ' ' + sizes[i];
+            } else {
+                result = (size / Math.pow(1024, i)).toFixed(2) + ' ' + sizes[i];
+		    }
+	    }
+		this.$.size.setContent("Size: "+result);
 	},
 	createDir: function(inSender, inEvent) {
 		this.currentRequest = this.$.mkDir.send({"path":this.selectedItem.full_path+"/"+this.$.newDir.getValue()});
