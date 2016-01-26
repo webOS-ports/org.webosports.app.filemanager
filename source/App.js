@@ -333,7 +333,7 @@ enyo.kind({
             } else if (size == 1) {
                 result = "1 byte";
             } else {
-	        var i = Math.max(sizes.length - 1, parseInt(Math.floor(Math.log(size) / Math.log(1024))));
+	        var i = Math.min(sizes.length - 1, parseInt(Math.floor(Math.log(size) / Math.log(1024))));
 	        if (i == 0) {
                     result = size + ' ' + sizes[i];
                 } else {
