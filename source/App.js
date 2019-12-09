@@ -86,7 +86,7 @@ enyo.kind({
 		{
 			name: "getDirs",
 			kind: "enyo.PalmService",
-			service: "luna://org.webosports.app.filemanager.service",
+			service: "luna://org.webosports.service.filemanager",
 			method: "GetDirectories",
 			subscribe: true,
 			onComplete: "getDirsComplete"
@@ -94,7 +94,7 @@ enyo.kind({
 		{
 			name: "removeDir",
 			kind: "enyo.PalmService",
-			service: "luna://org.webosports.app.filemanager.service",
+			service: "luna://org.webosports.service.filemanager",
 			method: "removeDir",
 			subscribe: true,
 			onComplete: "removeDirComplete"
@@ -102,7 +102,7 @@ enyo.kind({
 		{
 			name: "mkDir",
 			kind: "enyo.PalmService",
-			service: "luna://org.webosports.app.filemanager.service",
+			service: "luna://org.webosports.service.filemanager",
 			method: "mkDir",
 			subscribe: true,
 			onComplete: "mkDirComplete"
@@ -110,7 +110,7 @@ enyo.kind({
 		{
 			name: "removeFile",
 			kind: "enyo.PalmService",
-			service: "luna://org.webosports.app.filemanager.service",
+			service: "luna://org.webosports.service.filemanager",
 			method: "removeFile",
 			subscribe: true,
 			onComplete: "removeFileComplete"
@@ -118,7 +118,7 @@ enyo.kind({
 		{
 			name: "getFileSize",
 			kind: "enyo.PalmService",
-			service: "luna://org.webosports.app.filemanager.service",
+			service: "luna://org.webosports.service.filemanager",
 			method: "getFileSize",
 			subscribe: true,
 			onComplete: "getFileSizeComplete"
@@ -126,7 +126,7 @@ enyo.kind({
 		{
 			name: "moveFile",
 			kind: "enyo.PalmService",
-			service: "luna://org.webosports.app.filemanager.service",
+			service: "luna://org.webosports.service.filemanager",
 			method: "moveFile",
 			subscribe: true,
 			onComplete: "moveFileComplete"

@@ -1,0 +1,11 @@
+{
+    "services": [
+        "org.webosports.service.filemanager/removeDir",
+        "org.webosports.service.filemanager/mkDir",
+        "org.webosports.service.filemanager/removeFile",
+        "org.webosports.service.filemanager/moveFile",
+        "org.webosports.service.filemanager/getFileSize",
+        "org.webosports.service.filemanager/GetDirectories"
+    ]
+}
+
