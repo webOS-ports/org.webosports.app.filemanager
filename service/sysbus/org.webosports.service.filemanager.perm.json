@@ -1,6 +1,10 @@
 {
     "org.webosports.service.filemanager": [ 
-        "services"
+        "services",
+        "system",
+        "activities.manage",
+        "applications.launch",
+        "applications.internal"
     ]
 }
 
