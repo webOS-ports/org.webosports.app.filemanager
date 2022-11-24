@@ -1,5 +1,5 @@
 {
-    "services": [
+    "filemanager-service.operation": [
         "org.webosports.service.filemanager/removeDir",
         "org.webosports.service.filemanager/mkDir",
         "org.webosports.service.filemanager/removeFile",
