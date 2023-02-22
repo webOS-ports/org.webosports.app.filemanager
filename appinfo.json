@@ -8,5 +8,5 @@
 	"main": "index.html",
 	"icon": "icon.png",
 	"uiRevision": "2",
-	"requiredPermissions": ["services", "system", "activities.manage"]
+	"requiredPermissions": ["application.launcher", "filemanager-service.operation", "activity.operation"]
 }
